@@ -1,0 +1,13 @@
+{
+  "name": "project-etera-sports-module",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Project Etera - Sports Module for Beginner Arabic Learners (MSA / fuṣḥā)",
+  "scripts": {
+    "build": "python bundle.py",
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000"
+  },
+  "author": "Etera",
+  "license": "UNLICENSED"
+}

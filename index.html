@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Project Etera • Sports Module | Beginner Arabic</title>
+  <meta name="description" content="Project Etera - Sports Module for Beginner Arabic Learners (MSA / fuṣḥā). Interactive vocabulary, sentences, natural dialogues, and assessment.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+</head>
+<body>
+
+  <!-- Top App Navigation Bar -->
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="#" class="brand-badge" id="brand-link" onclick="if(window.eteraApp) window.eteraApp.goToSlide(1); return false;">
+        <span class="brand-logo-dot"></span>
+        <span>Project Etera</span>
+      </a>
+
+      <div class="header-actions">
+        <button id="header-rate-btn" class="icon-btn" title="Toggle audio speed (Normal 1.0x / Slow 0.75x)">
+          ⚡ 1.0x (Normal)
+        </button>
+        <button id="header-audio-btn" class="icon-btn" title="Open Audio Diagnostic & Tester">
+          🎧 Audio
+        </button>
+        <button id="header-menu-btn" class="icon-btn" title="Browse all 54 slides">
+          📑 Outline
+        </button>
+      </div>
+    </div>
+
+    <!-- Progress Track & Slide Indicator -->
+    <div class="progress-container">
+      <div class="progress-track">
+        <div id="progress-bar" class="progress-fill" style="width: 2%;"></div>
+      </div>
+      <div class="progress-meta">
+        <span id="section-indicator">Introduction</span>
+        <span id="slide-indicator">Slide 1 of 54</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Slide Viewport -->
+  <main class="app-main">
+    <div id="slide-container" class="slide-viewport">
+      <!-- Active slide is dynamically rendered by js/app.js -->
+    </div>
+  </main>
+
+  <!-- Master Build Brand Footer -->
+  <footer class="app-footer">
+    <p>© 2026 Etera. All rights reserved.</p>
+  </footer>
+
+  <!-- Slide Outline / Jump Drawer Modal -->
+  <div id="outline-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem; font-weight: 700;">Storyboard Outline (54 Slides)</h3>
+        <button id="close-outline-btn" class="icon-btn" style="border: none; font-size: 1.25rem;">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+          Jump directly to any slide or learning milestone:
+        </p>
+        <div id="outline-slide-list" class="slide-jump-list">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Diagnostic & Tester Modal -->
+  <div id="audio-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem; font-weight: 700;">Audio Engine & Recorded Clips</h3>
+        <button id="close-audio-btn" class="icon-btn" style="border: none; font-size: 1.25rem;">✕</button>
+      </div>
+      <div class="modal-body" id="audio-test-list">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Script (Classic Bundle: 100% compatible with file:// and http://) -->
+  <script src="js/bundle.js"></script>
+
+</body>
+</html>
